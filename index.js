@@ -10,6 +10,8 @@ const faker = require('faker')
 
 const bodyParser = require('body-parser')
 
+const PORT = process.env.PORT || 5000
+
 app.set("view engine","ejs")
 
 app.use(bodyParser.urlencoded({extended:false}))
@@ -57,6 +59,6 @@ app.post('/',async(req,res) => {
 })
 
 
-app.listen(5000,() => {
+app.listen(PORT,() => {
     console.log("app is listening on port 5000")
 })
